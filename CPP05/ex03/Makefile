@@ -1,0 +1,17 @@
+CPP = c++
+SRC = Bureaucrat.cpp Form.cpp Intern.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp main.cpp
+NAME = interns
+FLAGS = -Wall -Wextra -Werror -std=c++98
+
+all: $(NAME)
+
+$(NAME): $(SRC)
+	$(CPP) $(FLAGS) $(SRC) -o $(NAME)
+
+clean:
+	rm -f *.o
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean $(NAME)
